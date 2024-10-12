@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-item *ngFor="let user of users" (click)="selectUser(user)">
+    {{ user.name }}
+  </ion-item>
+</ion-header>
+
+<ion-card *ngIf="selectedUser">
+  <ion-card-header>
+    <ion-card-title>Detalles del Usuario</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>Teléfono: {{ selectedUser.phone }}</p>
+    <p>Email: {{ selectedUser.email }}</p>
+  </ion-card-content>
+</ion-card>
